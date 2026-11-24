@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://travelhh.github.io/nexgen-call/sitemap.xml

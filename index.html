@@ -7,9 +7,20 @@
 <meta name="description" content="NEXGEN CALL شريك تشغيل لوكالات السفر السعودية: موظف عمليات سفر مخصص لوكالتك يعمل من مصر على أنظمتك، مع إشراف ومراجعة جودة وتقارير وبديل جاهز.">
 <meta property="og:title" content="NEXGEN CALL | موظف عمليات سفر مخصص لوكالتك">
 <meta property="og:description" content="تذاكر الطيران، الفنادق، ما بعد البيع والمكتب الخلفي لوكالات السفر السعودية. وفّر في التكاليف، لا في جودة الخدمة.">
-<meta property="og:image" content="og.png">
+<meta property="og:image" content="https://travelhh.github.io/nexgen-call/og.png">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0B2230">
+<link rel="canonical" href="https://travelhh.github.io/nexgen-call/">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="تعهيد عمليات السفر, موظف تذاكر عن بعد, إصدار تذاكر, أماديوس, وكالات السفر السعودية, back office, ticketing outsourcing, travel BPO, NEXGEN CALL">
+<meta property="og:url" content="https://travelhh.github.io/nexgen-call/">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="NEXGEN CALL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NEXGEN CALL | موظف عمليات سفر مخصص لوكالتك">
+<meta name="twitter:image" content="https://travelhh.github.io/nexgen-call/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"NEXGEN CALL","alternateName":["نكست جن كول","NexCall Services"],"url":"https://travelhh.github.io/nexgen-call/","logo":"https://travelhh.github.io/nexgen-call/logo.svg","image":"https://travelhh.github.io/nexgen-call/og.png","description":"Managed travel operations partner for Saudi travel agencies: dedicated Egypt-based specialists for ticketing, reissues and refunds, hotel bookings, after-sales and back office.","telephone":"+201013749484","address":{"@type":"PostalAddress","addressLocality":"6th of October City","addressRegion":"Giza","addressCountry":"EG"},"areaServed":{"@type":"Country","name":"Saudi Arabia"},"availableLanguage":["ar","en"],"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],"opens":"09:00","closes":"17:00"},"sameAs":["https://www.linkedin.com/company/nexgen-call/"],"knowsAbout":["Amadeus GDS","NDC","Air ticketing","Refunds and reissues","Hotel reservations","Travel back office"]}</script>
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700;800&family=Noto+Sans:wght@400;700;800&display=swap" rel="stylesheet">
@@ -90,6 +101,17 @@ details p{color:var(--mut);margin-top:10px}
 footer{border-top:1px solid rgba(94,211,193,.12);padding:40px 0;color:var(--mut);font-size:14.5px}
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .wa{position:fixed;bottom:22px;left:22px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+/* form */
+.qform{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:32px}
+.qform label{display:flex;flex-direction:column;gap:6px;font-size:14.5px;color:var(--mut);font-weight:600}
+.qform input,.qform select,.qform textarea{font:inherit;font-size:16px;color:var(--txt);background:#0d2a35;border:1px solid var(--line);border-radius:14px;padding:12px 14px;outline:none}
+.qform input:focus,.qform select:focus,.qform textarea:focus{border-color:var(--mint)}
+.qform .full{grid-column:1/-1}.qform textarea{min-height:96px;resize:vertical}
+.qform .chips{display:flex;flex-wrap:wrap;gap:10px}
+.qform .chips label{flex-direction:row;align-items:center;gap:8px;background:#0d2a35;border:1px solid var(--line);border-radius:30px;padding:8px 14px;cursor:pointer;color:var(--txt);font-weight:500}
+.qform .chips input{accent-color:var(--gold);width:16px;height:16px}
+.qform .note{font-size:13.5px;color:var(--mut)}
+@media(max-width:700px){.qform{grid-template-columns:1fr;padding:22px}}
 @media(max-width:960px){.hero .wrap,.g4,.g3,.g2,.steps{grid-template-columns:1fr 1fr}.hero .wrap{grid-template-columns:1fr}h1{font-size:40px}.nav nav{display:none}.band{flex-direction:column;text-align:center;padding:40px 26px}}
 @media(max-width:600px){.g4,.g3,.g2,.steps{grid-template-columns:1fr}h1{font-size:34px}h2{font-size:29px}section{padding:64px 0}.hero{padding:64px 0}.cmp th,.cmp td{padding:12px;font-size:14.5px}}
 </style>
@@ -97,7 +119,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <body>
 <header><div class="wrap nav">
  <a class="brand" href="#"><img src="logo.svg" alt="NEXGEN CALL logo">NEXGEN <b>CALL</b></a>
- <nav><a href="#services">الخدمات</a><a href="#how">كيف نعمل</a><a href="#quality">الجودة والأمان</a><a href="#faq">الأسئلة</a><a href="#en" class="en">English</a></nav>
+ <nav><a href="#services">الخدمات</a><a href="#how">كيف نعمل</a><a href="#quality">الجودة والأمان</a><a href="#faq">الأسئلة</a><a href="#quote">طلب عرض</a><a href="#en" class="en">English</a></nav>
  <a class="btn" href="https://wa.me/201013749484?text=%D8%A3%D9%87%D9%84%D9%8B%D8%A7%20NEXGEN%20CALL%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" target="_blank" rel="noopener">تواصل معنا</a>
 </div></header>
 
@@ -192,8 +214,42 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
  <p style="color:var(--gold);font-weight:700">Save on operating costs. Not on service quality.</p>
 </div></section>
 
+<section id="quote"><div class="wrap" style="max-width:900px">
+ <div class="sec-h"><div class="eyebrow">طلب عرض</div><h2>احسب التوفير <span>لوكالتك</span></h2><p>املأ البيانات في دقيقة، وتوصلنا على واتساب مباشرة. نرد عليك في نفس يوم العمل.</p></div>
+ <form class="qform" id="qf" novalidate>
+  <label>اسم الوكالة *<input name="agency" required autocomplete="organization"></label>
+  <label>المدينة<input name="city" placeholder="الرياض، جدة، الدمام…"></label>
+  <label>اسم المسؤول *<input name="name" required autocomplete="name"></label>
+  <label>رقم الجوال<input name="phone" type="tel" dir="ltr" placeholder="+966" autocomplete="tel"></label>
+  <div class="full"><div style="font-size:14.5px;color:var(--mut);font-weight:600;margin-bottom:8px">الخدمات المطلوبة</div><div class="chips">
+   <label><input type="checkbox" name="svc" value="تذاكر الطيران (حجز وإصدار)">تذاكر الطيران</label>
+   <label><input type="checkbox" name="svc" value="إعادة الإصدار والاسترداد">إعادة الإصدار والاسترداد</label>
+   <label><input type="checkbox" name="svc" value="الفنادق والموردون">الفنادق والموردون</label>
+   <label><input type="checkbox" name="svc" value="ما بعد البيع والمكتب الخلفي">ما بعد البيع والمكتب الخلفي</label>
+  </div></div>
+  <label>عدد الطلبات اليومية تقريبًا<select name="volume"><option value="">اختر</option><option>أقل من 20</option><option>20 – 50</option><option>50 – 100</option><option>أكثر من 100</option></select></label>
+  <label>النظام المستخدم<select name="gds"><option value="">اختر</option><option>Amadeus</option><option>Sabre</option><option>Galileo / Travelport</option><option>بوابات مباشرة / NDC</option><option>غير ذلك</option></select></label>
+  <label class="full">ملاحظات<textarea name="notes" placeholder="أوقات الذروة، المشكلة الأكبر حاليًا، أي تفاصيل تساعدنا…"></textarea></label>
+  <div class="full" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap"><span class="note">بإرسال الطلب سيفتح واتساب برسالة جاهزة، ولا نحفظ بياناتك على الموقع.</span><button class="btn" type="submit" style="border:0;cursor:pointer">أرسل الطلب عبر واتساب</button></div>
+ </form>
+</div></section>
+<script>
+document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();var f=e.target;
+ if(!f.agency.value.trim()||!f.name.value.trim()){(f.agency.value.trim()?f.name:f.agency).focus();return;}
+ var svc=[].slice.call(f.querySelectorAll('input[name=svc]:checked')).map(function(x){return x.value}).join('، ');
+ var L=['طلب عرض – NEXGEN CALL','الوكالة: '+f.agency.value.trim()];
+ if(f.city.value.trim())L.push('المدينة: '+f.city.value.trim());
+ L.push('المسؤول: '+f.name.value.trim());
+ if(f.phone.value.trim())L.push('الجوال: '+f.phone.value.trim());
+ if(svc)L.push('الخدمات: '+svc);
+ if(f.volume.value)L.push('الطلبات اليومية: '+f.volume.value);
+ if(f.gds.value)L.push('النظام: '+f.gds.value);
+ if(f.notes.value.trim())L.push('ملاحظات: '+f.notes.value.trim());
+ window.open('https://wa.me/201013749484?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');});
+</script>
+
 <section><div class="wrap">
- <div class="band"><div><h2>جاهز توفّر في التشغيل؟</h2><p>احجز مكالمة تعريفية، ونحسب معاك التوفير لوكالتك بالأرقام.</p></div><a class="btn" href="https://wa.me/201013749484" target="_blank" rel="noopener">تواصل عبر واتساب</a></div>
+ <div class="band"><div><h2>جاهز توفّر في التشغيل؟</h2><p>احجز مكالمة تعريفية، ونحسب معاك التوفير لوكالتك بالأرقام.</p></div><a class="btn" href="#quote">اطلب عرض الآن</a></div>
 </div></section>
 
 <footer><div class="wrap">
