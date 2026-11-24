@@ -1,6 +1,0 @@
-<!doctype html><meta charset="utf-8"><title>relay</title><body>relay
-<script>
-(async()=>{const names=(new URLSearchParams(location.search).get('f')||'s1.png').split(',');const out=[];
-for(const n of names){const r=await fetch(n,{cache:'no-store'});const b=await r.blob();out.push({name:n,type:b.type,buf:await b.arrayBuffer()});}
-const tgt=window.opener||(window.parent!==window?window.parent:null);if(tgt){tgt.postMessage({nxFiles:out},'https://www.linkedin.com');document.body.textContent='sent '+out.length;setTimeout(()=>window.close(),1500);}})();
-</script>
