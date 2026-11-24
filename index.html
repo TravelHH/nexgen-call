@@ -26,7 +26,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{
- --paper:#EDF2F1; --paper2:#E2EAE8; --ink:#0B2230; --ink2:#3C5560; --mute:#6A818A;
+ --paper:#EDF2F1; --paper2:#E2EAE8; --ink:#0B2230; --ink2:#3C5560; --mute:#566C75;
  --teal:#0B8F7D; --teal-d:#07695C; --gold:#F2B33D; --board:#0D1A21; --tile:#15262E; --tile2:#1B313A; --line:#C9D6D3; --red:#C8503B;
  --disp:'Readex Pro','IBM Plex Sans Arabic',system-ui,sans-serif; --body:'IBM Plex Sans Arabic','Readex Pro',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
 }
@@ -145,8 +145,9 @@ section{padding:104px 0}
 .field input{width:100%;font-family:var(--mono);font-size:17px;font-weight:500;color:var(--ink);background:var(--paper);border:1.5px solid transparent;border-radius:10px;padding:11px 14px 11px 52px;direction:ltr;text-align:right}
 .field input:focus{outline:none;border-color:var(--teal);background:#fff}
 .field .in:after{content:attr(data-u);position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--mute);font-family:var(--body)}
-.chk{grid-column:1/-1;display:flex;align-items:center;gap:10px;font-size:15px;color:var(--ink2);cursor:pointer}
-.chk input{width:18px;height:18px;accent-color:var(--teal)}
+.chk{grid-column:1/-1;display:flex;align-items:center;gap:12px;font-size:15px;color:var(--ink2);cursor:pointer;min-height:44px}
+.chk input{width:22px;height:22px;accent-color:var(--teal);flex:none}
+.peek{display:none}
 .calc-out{background:var(--ink);color:#E9F1EF;padding:36px;display:flex;flex-direction:column}
 .calc-out small{color:#A9C1BC;font-size:15px}
 .big{font-family:var(--disp);font-weight:700;font-size:clamp(44px,5vw,64px);line-height:1.1;margin:8px 0 2px;direction:ltr;text-align:right;color:#fff}
@@ -199,13 +200,13 @@ section{padding:104px 0}
 .qform fieldset{border:0;grid-column:1/-1}
 .qform legend{font-size:14.5px;color:var(--ink2);font-weight:500;margin-bottom:8px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips label{flex-direction:row;align-items:center;gap:8px;background:var(--paper);border-radius:10px;padding:9px 14px;cursor:pointer;color:var(--ink);font-weight:500}
-.chips input{accent-color:var(--teal);width:16px!important;height:16px;padding:0;flex:none}
+.chips label{flex-direction:row;align-items:center;gap:10px;background:var(--paper);border-radius:10px;padding:0 16px;min-height:44px;cursor:pointer;color:var(--ink);font-weight:500}
+.chips input{accent-color:var(--teal);width:20px!important;height:20px;padding:0;flex:none}
 .qerr{grid-column:1/-1;color:var(--red);font-size:14.5px;min-height:1em}
 .qfoot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .qfoot small{color:var(--mute);font-size:13.5px;max-width:36ch}
 .contact-list{list-style:none;margin-top:30px;display:grid;gap:14px}
-.contact-list a{text-decoration:none;display:flex;gap:12px;align-items:center;font-size:16.5px}
+.contact-list a{text-decoration:none;display:flex;gap:12px;align-items:center;font-size:16.5px;min-height:44px}
 .contact-list svg{flex:none}
 
 /* english */
@@ -221,6 +222,7 @@ footer{background:var(--board);color:#A9C1BC;padding:56px 0 40px;font-size:15px}
 .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
 footer .brand{color:#fff}
 footer a{text-decoration:none}footer a:hover{color:#fff}
+.foot-links a{display:inline-flex;align-items:center;min-height:40px}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap}
 .legal{margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);font-size:13.5px;color:#7F98A1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
@@ -249,7 +251,10 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
  .stub em{font-size:22px}
  .steps,.day,.ctrl{grid-template-columns:1fr}
  .ctrl div:nth-child(even){padding-right:0;border-right:0}
- .calc-in{grid-template-columns:minmax(0,1fr);padding:26px 22px}.calc-out{padding:28px 22px}
+ .calc-in{grid-template-columns:minmax(0,1fr);padding:26px 22px}
+ .calc{overflow:visible}.calc-out{border-radius:0 0 22px 22px}.calc-in{border-radius:22px 22px 0 0}
+ .peek{display:flex;justify-content:space-between;align-items:center;gap:12px;position:sticky;top:84px;z-index:5;background:var(--ink);color:#cfe0dc;border-radius:12px;padding:12px 16px;text-decoration:none;font-size:14.5px;box-shadow:0 10px 24px -10px rgba(11,34,48,.5)}
+ .peek b{font-family:var(--mono);font-weight:600;font-size:19px;color:#fff;direction:ltr}.calc-out{padding:28px 22px}
  .qform{grid-template-columns:minmax(0,1fr);padding:24px 20px}
  .cols,.row{grid-template-columns:46px minmax(0,1fr) auto;gap:10px}
  .cols .c-ref,.cols .c-route,.row .tiles,.row .route{display:none}
@@ -345,6 +350,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
   <form class="calc-in" id="cf" onsubmit="return false">
    <h3>بيانات الموظف بالريال السعودي</h3>
    <p class="hint">أرقام افتراضية للتجربة. عدّلها لأرقام وكالتك.</p>
+   <a class="peek" href="#calc-out" aria-hidden="true" tabindex="-1"><span>التكلفة الشهرية الحقيقية</span><b id="peek">0 SAR</b></a>
    <label class="field">الراتب الأساسي (شهريًا)<span class="in" data-u="SAR"><input inputmode="numeric" name="basic" value="6000"></span></label>
    <label class="field">بدل السكن (شهريًا)<span class="in" data-u="SAR"><input inputmode="numeric" name="housing" value="1500"></span></label>
    <label class="field">بدل النقل (شهريًا)<span class="in" data-u="SAR"><input inputmode="numeric" name="transport" value="600"></span></label>
@@ -356,7 +362,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
    <label class="chk"><input type="checkbox" name="leave" checked> احسب تكلفة تغطية الإجازة السنوية (30 يومًا)</label>
    <label class="chk"><input type="checkbox" name="eos" checked> احسب مخصص مكافأة نهاية الخدمة (نصف شهر عن كل سنة)</label>
   </form>
-  <div class="calc-out" aria-live="polite">
+  <div class="calc-out" id="calc-out" aria-live="polite">
    <small>التكلفة الشهرية الحقيقية</small>
    <div class="big" id="total">0<span>SAR</span></div>
    <div class="ratio" id="ratio"></div>
@@ -504,10 +510,11 @@ if(!reduce){setInterval(function(){if(document.hidden)return;var r=mk(POOL[idx%P
 // calculator
 var cf=document.getElementById('cf'), fmt=new Intl.NumberFormat('en-US',{maximumFractionDigits:0}), last=null;
 var C=[['الراتب الأساسي','#5ED3C1'],['البدلات','#0EA18E'],['التأمين والتأمينات','#F2B33D'],['الرسوم والتذاكر','#E58B6E'],['المكتب والأنظمة','#8FB3BD'],['الإجازة ونهاية الخدمة','#C9D6D3']];
-function v(n){var x=parseFloat(String(cf[n].value).replace(/[^\d.]/g,''));return isFinite(x)&&x>0?x:0}
+function v(n){var t=String(cf[n].value).replace(/[\u0660-\u0669]/g,function(d){return d.charCodeAt(0)-1632}).replace(/[\u06F0-\u06F9]/g,function(d){return d.charCodeAt(0)-1776}).replace(/[\u066B]/g,'.').replace(/[,\u066C\s]/g,'');if(/^-/.test(t))return 0;var x=parseFloat(t.replace(/[^\d.]/g,''));return isFinite(x)&&x>0?x:0}
 function calc(){var b=v('basic'),al=v('housing')+v('transport'),ins=v('medical')+v('gosi'),fees=(v('permits')+v('ticket'))/12,off=v('office'),
  lv=cf.leave.checked?(b+al)*30/365:0, eos=cf.eos.checked?b/24:0, parts=[b,al,ins,fees,off,lv+eos], tot=parts.reduce(function(a,c){return a+c},0);
  document.getElementById('total').innerHTML=fmt.format(tot)+'<span>SAR</span>';
+ document.getElementById('peek').textContent=fmt.format(tot)+' SAR';
  document.getElementById('ratio').textContent=b>0?('أي '+fmt.format(tot/b*100)+'٪ من الراتب الأساسي، و'+fmt.format(tot*12)+' ريال في السنة'):'';
  document.getElementById('stack').innerHTML=parts.map(function(p,i){return '<i style="width:'+(tot?p/tot*100:0)+'%;background:'+C[i][1]+'"></i>'}).join('');
  document.getElementById('legend').innerHTML=parts.map(function(p,i){return '<li style="--c:'+C[i][1]+'"><span>'+C[i][0]+'</span><b>'+fmt.format(p)+'</b></li>'}).join('');
